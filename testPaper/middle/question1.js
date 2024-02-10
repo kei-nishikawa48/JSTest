@@ -24,4 +24,10 @@
 
 export const createUserActionString = (object) => {
   //ここに記述
+  let userName = object.userName ? object.userName + "さん" : "名無しさん";
+  let action = object.action
+    ? "が" + object.action + "しました"
+    : "は何もしませんでした";
+
+  return userName + action;
 };
